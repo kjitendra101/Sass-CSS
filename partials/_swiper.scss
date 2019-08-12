@@ -1,0 +1,113 @@
+.slider {
+    margin: 0 -15px;
+
+    .swiper-slide {
+        text-align: center;
+        max-height: 306px;
+        @include flex;
+        @include flex-wrap;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &__text {
+            @include pseudo (position);
+            background-color: $blue-bg-color;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            @include flex;
+            @include justify-content (space-between);
+            @include align-center;
+            padding: 1rem 1.5rem; 
+
+            &__textbox {
+                font-size: $left-menu-font-size;
+                font-weight: 500;
+                color: $body-bg-color;
+
+                &__price {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    font-size: $body-font-size;
+                }
+            }
+
+            &__shopnew-btn {
+                max-width: inherit;
+                width: auto;
+                padding: 0 2.5rem;
+                margin: 0;
+                height: 4.4rem;
+                font-size: $body-font-size;
+                line-height: 4.4rem;
+            }
+        }
+    }
+}
+/******* Featured Products ***********/
+.featured-products {
+    margin: 2.5rem -15px 0;
+    
+    &__title {
+        font: $h1-font;
+        padding: 0 0rem;
+        margin-bottom: 1rem;
+
+        @media (max-width: $large-mobile) {
+            padding: 0 1.5rem;
+        }
+    }
+
+    &__slider {
+        padding: 1rem 0rem;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        @media (max-width: $large-mobile) {
+            padding: 1rem 1.5rem;
+        }
+
+        .swiper-slide {
+            
+            &__imgbox {
+                border: 1px solid $box-border-color;
+                margin-bottom: 1.2rem;
+                
+
+                &__link {
+                    @include flex;
+                    @include justify-content (center);
+                    @include align-center;
+                    height: 150px;
+                    text-align: center;
+
+                    img {
+                        display: inline-block;
+                        max-height: 145px;
+                        max-width: 100%;
+                    }
+                }
+            }
+            
+            &__pricebox {
+                @include flex;
+                @include justify-content (space-between);                
+                
+                &__product-name {
+                    @include product-title-font;
+                }
+
+                p {
+                    font-size: $product-price-font-size;
+                    color: $product-price-font-color;
+                    margin: 0;
+                }
+            }        
+        }
+    }
+}

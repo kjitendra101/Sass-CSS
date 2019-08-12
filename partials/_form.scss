@@ -1,0 +1,260 @@
+
+.response {
+    &.error {
+        background-color: $errer--msg-color;
+        color: $body-bg-color;
+        font-size: $errer-font-size;
+        padding: 1rem !important;
+        text-align: center;
+        margin-bottom: 2rem !important;
+    }
+}
+.response {
+    &.success {
+        background-color: $success-msg-color;
+        color: $body-bg-color;
+        font-size: $errer-font-size;
+        padding: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+
+.form {
+    &--spacing {
+        padding-top: 4rem;
+    }
+    
+    &__group {
+        padding-bottom: 2.6rem; 
+
+        /*** Start file uploader ****/
+        &__browse {
+            &__browse-box {
+                width: 100%;
+                border-bottom: 1px solid $form-control-border;
+                position: relative;
+                @include flex;
+                @include justify-content(space-between);
+                @include align-center;
+
+                input[type='file'] {
+                   opacity: 0;
+                   position: absolute;
+                   height: 100%;
+                   width: 100%;
+                }
+
+                &__file-info  {
+                    font-size: $body-font-size;
+                }
+
+                &__browse-btn {
+                    background: $body-bg-grey-color;
+                    color: $body-color;
+                    font-size: $body-font-size;
+                    min-height: 35px;
+                    padding: 1rem 2rem;
+                    border: none;
+                }
+            }
+        }
+        /*** End file uploader ****/
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 0.3rem;
+        color: $label-color;
+        font-size: $label-font-size;
+        text-transform: uppercase;
+    }
+
+    &__control {
+        width: 100%;
+        height: 2.6rem;
+        color: $form-control-color;
+        font-size: $form-control-font-size;
+        border: none;
+        border-bottom: 1px solid $form-control-border;
+        outline: none;
+    }
+
+    &__link {
+        display: table;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .form__group {
+        position: relative;
+
+        .error-label {
+            font-size: $search-filter-font;
+            color: $errer--msg-color;
+            position: absolute;
+            left: 0;
+            bottom: 7px;
+        }
+    }
+
+    /*** My account page ****/
+    &--account  {
+        &__link {
+            margin: 1.5rem 0;
+            display: inline-block;
+            font-size: $h2-font-size;
+            color: $form-control-color;
+            font-weight: $button-font-weight;
+        }
+    }
+}
+
+/***** Search ****/
+.search-box {
+    width: 100%;
+    display: block;
+
+    &__form {
+        &__group {
+            padding-bottom: 2.6rem; 
+            position: relative;
+
+            &__control {
+                width: 100%;
+                height: 4.2rem;
+                padding: 10px 15px;
+                color: $form-control-color;
+                font: $body-font;
+                border: none;
+                border: 1px solid $search-form-control-border;
+                outline: none;
+                @include border-radius(5px);
+            }
+
+            &__button {
+                width: 25px;
+                height: 42px;    
+                @include pseudo (position);
+                right: 0;
+                top: 0;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                outline: 0;
+
+                    &:before {
+                        width: 25px;
+                        height: 25px;
+                        @extend %sprite;
+                        background-position: -81px 0; 
+                        @include pseudo (position);
+                        content: '';
+                        right: 15px;
+                        top: 50%;
+                        margin-top: -10px;
+                    }                    
+            }
+        }
+    }
+}
+/***** Search filter for product page ****/
+.search-block {
+    margin: $margin-minus;
+    @include flex;
+    @include justify-content (space-between);
+
+    @media (max-width: $large-mobile) {
+        margin: 0 0;
+    }
+
+    &__filter {
+        color: $body-color;
+        font-size: $search-filter-font;
+        text-transform: uppercase;
+        line-height: 18px;
+
+        &__ic {
+            width: 16px;
+            height: 16px;
+            margin-right: .2rem;
+            vertical-align: top;
+            display: inline-block;
+            @extend %sprite;
+            background-position: -74px -37px; 
+        }
+    }
+
+    &__sort {
+        color: $body-color;
+        font-size: $search-filter-font;
+        text-transform: uppercase;
+        line-height: 18px;
+        
+        &__ic {
+            width: 16px;
+            height: 16px;
+            margin-right: .2rem;
+            vertical-align: top;  
+            display: inline-block;
+            @extend %sprite;
+            background-position: -74px -61px;
+        }
+    }
+
+    &__back {
+        color: $body-color;
+        font-size: $search-filter-font;
+        text-transform: uppercase;
+        line-height: 18px;
+        
+        &__ic {
+            width: 15px;
+            height: 20px;
+            margin-right: 0rem;
+            vertical-align: top;  
+            display: inline-block;
+            @extend %sprite;
+            background-position: -112px -2px;
+        }
+    }
+}
+
+
+/********/
+
+.quantity-box {
+    width: auto;
+    border: 1px solid $box-border-color;
+    @include flex;
+    @include justify-content(space-between);
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: $body-color;
+        font-size: $body-font-size;
+        cursor: pointer;
+        
+        &.sub-mini {
+            font-size: $h2-font-size;
+            padding: 0 1rem;
+        }
+        &.add-plus {
+            font-size: $h2-font-size;
+            padding: 0 0.5rem;
+        }
+    }
+
+    .quantity-number {
+        border: none;
+        width: 100%;
+        max-width: 30px;
+        height: 30px;
+        text-align: center;
+        appearance: none;
+        -webkit-appearance: none; 
+        font-size: $link-font-size;
+    }
+
+}

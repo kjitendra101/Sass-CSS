@@ -1,0 +1,98 @@
+.tab-menu {
+    position: fixed;
+    background-color: $bottom-bg-color;
+    width: 100%;
+    bottom: 0;
+    align-items: center;
+    padding: 0; 
+    z-index: 9;
+
+    .container {
+        padding: 0;
+        @include flex;
+        @include justify-content(space-between); 
+        @include flex-wrap;
+
+        @media (max-width: $large-mobile) {
+          padding: 0 1.5rem;
+        }
+    }
+
+    &__filter {        
+        &__link {
+            padding: 10px 15px;
+            display: block;
+            color: $body-bg-color;
+            text-align: center;
+
+            &__ic {
+                @extend %sprite;                    
+                display: inline-block;
+                            
+                &--home {
+                    width: 20px;
+                    height: 23px;
+                    background-position: -1px -215px;
+                }
+                            
+                &--cart {
+                    width: 25px;
+                    height: 23px;
+                    background-position: 0px -57px;
+                }
+            }
+
+            &__name {
+                width: 100%;
+                display: block;
+                line-height: 15px;
+                font-size: $body-font-size;
+                color: $button-font-color;
+                font-weight: $left-menu-font-weight;
+            }
+
+            &:hover, &.active {
+                background: $botton-menu-hover-color;
+            }                        
+        } 
+        
+        &--search {
+            &__link {
+                height: 40px;
+                display: block;
+
+                &:hover, &.active {
+                    background-color: transparent;
+                }
+                
+                &__ic {                   
+                    width: 48px;
+                    height: 48px;
+                    position: absolute;
+                    left: 50%;
+                    top: -20px;
+                    margin-left: -22px; 
+                    box-shadow: $secondary-button-shadow;
+                    line-height: 54px;
+                    background-color: $body-bg-color;
+                    @include border-radius(100px);
+
+                    &:before {
+                        @extend %sprite;
+                        width: 25px;
+                        height: 20px;
+                        @include pseudo;
+                        left: 12px;
+                        top: 13px;                        
+                        background-position: -81px 0;
+                    }
+
+                    &:hover {
+                        background-color: $body-bg-color;
+                    }
+                }                
+            }
+        }
+    }
+}      
+ 

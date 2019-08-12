@@ -1,0 +1,71 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $body-color;
+    font: $body-font;
+    line-height: $body-line-height;
+    background-color: $body-bg-color;
+}
+
+a {
+    color: $link-color;
+    font-size: $link-font-size;
+    text-decoration: none;
+    @include transition(350ms ease);
+    
+    &:hover {
+        color: $link-color;
+        // text-decoration: underline;   
+    }
+}
+
+strong {
+    font: 500 $link-font-size $font-family;
+}
+
+h1 {
+    color: $h1-color;
+    font: $h1-font;
+    line-height: $h1-line-height;
+    margin-bottom: 1.5rem;
+
+    span {
+        display: block;
+        color: $h1-span-color;
+        font-weight: $h1-span-font-weight;
+    }
+}
+
+h2 {
+    font: $h2-font;  
+    color: $h2-color;
+}
+
+h3 {
+  font: $h3-font;  
+  color: $h3-color;
+  margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+%sprite {
+    background-image: url('../img/sprite.png');
+    background-repeat: no-repeat;
+}

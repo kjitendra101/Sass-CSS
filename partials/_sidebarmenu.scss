@@ -1,0 +1,153 @@
+.sidebar {
+    width: 100%;
+    height: 100%;
+    max-width: 356px;
+    position: fixed;
+    z-index: 99;
+    top: 0px;
+    left: -370px;
+    background-color: $body-bg-color;
+    overflow-x: hidden;
+    @include transition(350ms ease);
+    padding-top: 4rem;
+    box-shadow: 0 0 20px #00000057;
+
+    &__close {
+        width: 30px;
+        @include pseudo;
+        top: -4px;
+        right: 10px;
+        font-size: 3.6rem;        
+        font-weight: 300;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__user {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        @include flex;
+        @include align-center;
+
+        &__name {
+            font: $h2-font;
+            margin-left: 1rem;
+            text-decoration: none; 
+        }
+    }
+
+    &__menu {
+        padding: 0; 
+        margin-bottom: 2.5rem;
+
+        &__item {
+            &__link {
+                padding: 1.2rem 0 1.2rem 8.5rem;
+                font-size: $left-menu-font-size;
+                color: $left-menu-color; 
+                display: block;
+                position: relative;
+                @include transition(350ms ease);
+    
+                &:hover {
+                    color: $body-bg-color;
+                    background-color: $left-menu-hover-color;
+                }
+    
+                &:before {
+                    width: 25px;
+                    height: 25px;
+                    @extend %sprite;
+                    background-position: 0 0; 
+                    position: absolute;
+                    content: '';
+                    left: 35px;
+                    top: 50%;
+                    margin-top: -12px;
+                    @include transition(350ms ease);
+                }
+    
+                &--orders {
+                    &:before {
+                        background-position: 0 -30px;
+                    }
+    
+                    &:hover {
+                        &:before {
+                            background-position: -35px -30px;
+                        } 
+                    }
+                }
+    
+                &--cart {
+                    &:before {
+                        background-position: 0 -57px;
+                    }
+    
+                    &:hover {
+                        &:before {
+                            background-position: -35px -57px;
+                        } 
+                    }
+                }
+    
+                &--offers {
+                    &:before {
+                        background-position: 0 -93px;
+                    }
+    
+                    &:hover {
+                        &:before {
+                            background-position: -35px -93px;
+                        } 
+                    }
+                }
+    
+                &--notification {
+                    &:before {
+                        background-position: 0 -126px;
+                    }
+    
+                    &:hover {
+                        &:before {
+                            background-position: -35px -126px;
+                        } 
+                    }
+                }
+    
+                &--customer {
+                    &:before {
+                        background-position: 0 -158px;
+                    }
+    
+                    &:hover {
+                        &:before {
+                            background-position: -35px -158px;
+                        } 
+                    }
+                }
+    
+                &--logout {
+                    &:before {
+                        background-position: 0 -190px;
+                    }
+    
+                    &:hover {
+                        &:before {
+                            background-position: -35px -190px;
+                        } 
+                    }
+                }
+            }
+        }        
+    }
+}
+
+.openmenu {
+    .sidebar {
+        left: 0;
+        @include transition(350ms ease);
+    }
+}

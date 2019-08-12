@@ -1,0 +1,73 @@
+$header-bg-img: '../img/header-bg-img.png';
+
+.header {
+    height: $header-height;
+    position: relative;
+    overflow: hidden;
+    background: $header-bg-color url($header-bg-img) right top no-repeat;
+    background-size: 100% auto;
+    -ms-flex: none;
+    -moz-flex: none;
+    -webkit-flex: none;
+    flex: none;
+    
+    @media (max-width: $mobile) {
+        background-size: auto;
+    }
+
+    &__logo {
+        padding: 3.5rem 0 3.4rem 3.2rem;
+    }
+
+    &__shop {
+        position: absolute;
+        right: 0px;
+        bottom: -6px;
+
+        @media (max-width: $large-mobile) {
+            right: -27px;
+        }
+    }
+
+    &--common {        
+        padding: 0 1.5rem;
+        height: $header-height-common;
+        position: fixed;
+        width: 100%;
+        z-index: 9;
+
+        .container {
+            padding: 0;
+            @include flex;
+            @include justify-content(space-between);
+            align-items: center;
+            height: $header-height-common;
+        }
+    }
+    
+    &__menu {
+        width: 25px;
+        height: 20px;
+        @extend %sprite;
+    }
+
+    &__user {
+        width: 25px;
+        height: 20px;
+        @extend %sprite;
+        background-position: -55px -1px; 
+    }
+
+    &__login {
+        width: 25px;
+        height: 20px;
+        @extend %sprite;
+        background-position: -28px 0; 
+    }
+
+    &__title {
+        margin: 0;
+        font: $h1-font;
+        color: $body-bg-color;        
+    }
+}

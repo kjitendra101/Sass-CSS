@@ -1,0 +1,192 @@
+// Clearfix
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Placeholder
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+    
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// Box Shadow
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;    
+    box-shadow: $shadow;
+}
+
+// Transition
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+// Transform
+@mixin transform($transform) {
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    transform: $transform;
+}
+
+// Animation
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -ms-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+// Psuedo
+@mixin pseudo($content: '', $position: absolute){
+    content: $content;
+    position: $position;
+}
+
+// Overlay
+@mixin overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+// Margin Auto
+@mixin margin-auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+// Center
+@mixin center($position) {
+    position: absolute;
+    z-index: 1;
+    
+    @if $position == 'vertical' {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    @else if $position == 'horizontal' {
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translate(-50%);
+    }
+    @else if $position == 'both' {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+}
+
+// Flex
+@mixin flex {
+    -ms-display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    display: flex;
+}
+
+@mixin flex-grow($int) {
+	-webkit-box-flex: $int;
+	-webkit-flex-grow: $int;
+	-moz-flex-grow: $int;
+	-ms-flex-positive: $int;
+	flex-grow: $int;
+}
+
+@mixin flex-bottom {
+	-webkit-box-flex: 1 0 auto;
+	-webkit-flex: 1 0 auto;
+	-moz-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+}
+
+@mixin flex-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@mixin flex-direction($flex-direction) {
+    @if $flex-direction == 'row' {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    } @else if $flex-direction == 'column' {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }   
+}
+
+@mixin align-center {
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@mixin justify-content($justify-content) {
+    @if $justify-content == 'center' {
+        -webkit-justify-content: center;
+        justify-content: center;
+    } @else if $justify-content == 'space-between' {
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+}
+
+/**** Price font size & color and weight**/
+@mixin price-font{
+    font-size: $product-price-font-size;  
+    color: $product-price-font-color;
+    font-weight: $button-font-weight;
+}
+
+/*** Product tile font **/
+
+@mixin product-title-font{
+    font-size: $link-font-size;
+    font-weight: $left-menu-font-weight;
+    color: $body-color;
+}
+
+/**** Button Gradient ****/
+
+@mixin btn-gradient {
+    background: rgba(255,80,36,1);
+    background: -moz-linear-gradient(left, rgba(255,80,36,1) 0%, rgba(0,213,149,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,80,36,1)), color-stop(100%, rgba(0,213,149,1)));
+    background: -webkit-linear-gradient(left, rgba(255,80,36,1) 0%, rgba(0,213,149,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,80,36,1) 0%, rgba(0,213,149,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,80,36,1) 0%, rgba(0,213,149,1) 100%);
+    background: linear-gradient(to right, rgba(255,80,36,1) 0%, rgba(0,213,149,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5024', endColorstr='#00d595', GradientType=1 );
+}

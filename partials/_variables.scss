@@ -1,0 +1,119 @@
+// Font Family
+$font-family: 'Ubuntu', sans-serif;
+
+// Body
+$wrapper-width: 1024px;
+$body-font-size: 1.6rem;
+$body-font: $body-font-size $font-family;
+$body-color: #2A2A2A;
+$body-line-height: 1.5;
+$body-bg-color: #fff;
+
+$body-bg-grey-color: #eee;
+
+// Link
+$link-color: #EF3100;
+$link-font-size: 17px;
+
+$product-price-font-size: 15px;
+$product-price-font-color: #EF3100;
+
+// H1
+$h1-color: #1D1D1D;
+$h1-font-size: 2.3rem;
+$h1-font-weight: 700;
+$h1-line-height: 35px;
+$h1-font: $h1-font-weight $h1-font-size $font-family;
+$h1-span-color: #858585;
+$h1-span-font-weight: 400;
+
+// H2
+$h2-color: #1D1D1D;
+$h2-font-size: 2rem;
+$h2-font-weight: 600;
+$h2-font: $h2-font-weight $h2-font-size $font-family;
+
+// H3
+$h3-color: #1D1D1D;
+$h3-font-size: 1.9rem;
+$h3-font-weight: 500;
+$h3-font: $h3-font-weight $h3-font-size $font-family;
+
+// Form
+$label-color: #777777;
+$label-font-size: 1.5rem;
+//$lable-font: $label-font-size $font-family;
+
+
+
+$form-control-color: #000000;
+$form-control-font-size: 1.8rem;
+//$form-control-font: $form-control-font-size $font-family;
+$form-control-border: #D2D2D2;
+$search-form-control-border: #C9C9C9;
+
+// Button
+$button-font-size: 2rem;
+$button-font-weight: 500;
+$button-font: $button-font-weight $button-font-size $font-family;
+
+$primary-button-color: #fff;
+$primary-button-bg-color: #20367B;
+$primary-button-shadow: 0 2px 5px #A2A2A2;
+
+$primary-button-hover-color: $primary-button-color;
+$primary-button-hover-bg-color: #111d42;
+
+$secondary-button-color: #FF5124;
+$secondary-button-bg-color: #fff;
+$secondary-button-shadow: 0 0 10px #808080;
+
+$secondary-button-hover-color: $secondary-button-bg-color;
+$secondary-button-hover-bg-color: $secondary-button-color;
+
+// Header
+$header-height: 166px;
+$header-bg-color: #FF5124;
+$header-height-common: 58px;
+
+// left menu 
+$left-menu-color: #1D1D1D;
+$left-menu-font-size: 1.8rem;
+$left-menu-font-weight: 500;
+$menu-font: $left-menu-font-size $left-menu-font-weight;
+
+$left-menu-hover-color: #FF5124;
+
+// Slider blue color
+$blue-bg-color: #FF5124CC;
+
+$bottom-bg-color: #FFE9E9;
+$botton-menu-hover-color: #fff;
+$button-font-color: #2A2A2A;
+
+$box-border-color: #CECECE;
+// Margin minus
+$margin-minus: 0 -15px;
+
+// search filter 
+$errer--msg-color: #ff4242;
+$errer-font-size: 14px;
+$search-filter-font: 13px;
+
+$success-msg-color: #2cba68;
+
+
+// text indent
+$text-indent: -999px;
+
+// Rating 
+
+$rating-bg-color: #ccc;
+$rating-bg-color-hover: #7f7f7f;
+
+
+// Media Query
+$desktop: 1024px;
+$tablet: 768px;
+$large-mobile: 800px;
+$mobile: 375px;
