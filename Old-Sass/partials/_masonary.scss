@@ -1,0 +1,73 @@
+.masonry {
+    @include flex;
+    width: 100%;
+    padding-top: 5px;
+
+    &.masonry--h {
+        flex-flow: row wrap;
+        counter-reset: brick;
+        padding-right: 3px;
+        padding-left: 2px;
+        
+        @media only screen and (max-width: $tablet){
+            padding: 0;
+        }
+    }
+
+    .masonry-brick {
+        overflow: hidden;
+        margin: 0 0 3px 3px;
+        background-color: #333;
+        color: white;
+        position: relative;
+        
+        @media only screen and (max-width: $large-mobile){
+            margin-left: 0;
+        }
+
+        &.masonry-brick--h {
+            flex: auto;
+            min-width: 150px;
+            
+        }
+    }
+    .masonry-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: brightness(50%);
+    }
+    @media only screen and (min-width: $tablet){
+
+        .masonry-brick--h:nth-child(4n+1) {
+            flex-basis: 43%;
+            
+            &.masonary-3 {
+                flex-basis: 32%;
+            }
+        }
+        .masonry-brick--h:nth-child(4n+2) {
+            flex-basis: 44%;
+            
+            &.masonary-3 {
+                flex-basis: 30%;
+            }
+        }
+        .masonry-brick--h:nth-child(4n+3) {
+            flex-basis: 37%;
+        }
+        .masonry-brick--h:nth-child(4n+4) {
+            flex-basis: 25%;
+            
+        }
+    }
+    @media only screen and (max-width: $tablet){
+        
+        .masonry-brick--h:nth-child(4n+3) {
+            
+            &.masonary-3 {
+                flex-basis: 45%;
+            }
+        }
+    }
+}

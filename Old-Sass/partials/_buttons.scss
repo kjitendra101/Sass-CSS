@@ -1,0 +1,59 @@
+%button {
+    @include display(block);
+    color: $primary-button-color;
+    font-size: $button-font-size;  
+    font-family: $title-font-family;
+    font-weight: 500; 
+    @include transition(350ms ease);
+    @include padding(12px 35px);
+    border: 0;
+    position: relative;
+}
+
+.button-wrap {
+    @include flex;
+}
+
+.btn {
+    @extend %button;
+}
+
+.primary-btn {
+    background-color: $primary-button-bg-color;
+
+    &:hover {
+        background-color: lighten($theme-dark-color , 20%);
+    }
+}
+
+.btn-banner {
+    @include padding(0 70px 0 0);
+    @include margin(20px 0 0);
+    font-weight: 500;
+    @include transition(350ms ease);
+    line-height: 18px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        @extend %sprite;
+        width: 31px;
+        height: 31px;
+        right: 22px;
+        top: -5px;
+        @include transition(350ms ease);
+    }
+
+    &:hover {        
+        &:after {
+            right: 10px;
+        }
+    }
+}
+
+.form-submit {
+    .submit {
+        @extend %button;
+        @extend .primary-btn;
+    }
+}

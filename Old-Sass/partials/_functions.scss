@@ -1,0 +1,24 @@
+// Function
+@function calc-percent($target, $container) {
+    @return ($target / $container) * 100%;
+}
+
+// For
+@for $i from 1 through 10 {
+    .item-#{$i} { width: 10% * $i; }
+}
+
+// Each
+@each $element, $color, $font-size, $font-weight, $margin-bottom in (h1, $h1-color, $h1-font-size, $h1-font-weight, $h1-margin-bottom),
+                                  (h2, $h2-color, $h2-font-size, $h2-font-weight, $h2-margin-bottom),
+                                  (h3, $h3-color, $h3-font-size, $h3-font-weight, $h3-margin-bottom),
+                                  (h4, $h4-color, $h4-font-size, $h4-font-weight, $h4-margin-bottom){
+  #{$element} {
+     margin-bottom: $margin-bottom;
+     color: $color;
+     font-size: $font-size;
+     font-weight: $font-weight;
+     line-height: $font-size + 3;
+     font-family: $h-font;
+ }
+}

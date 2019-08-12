@@ -1,0 +1,991 @@
+#footer {
+    background-color: $footer-bg-color;
+    @include padding(50px 0 25px 0);
+    color: $footer-text-color;
+    position: relative;
+    font-size: $body-font-size-small;
+    z-index: 1;
+
+    @media screen and (max-width: $tablet) {
+        @include padding(30px 0);
+    }
+
+    h4 {
+        color: $footer-title-color;
+        @include margin(0 0 20px);
+        font-size: $h4-font-size;
+        
+
+        @media screen and (max-width: $desktop) {
+            @include margin(0 0 15px);
+            line-height: $footer-h4-font-size;
+        }
+    }
+
+    p {
+        color: $footer-text-color;
+        line-height: $body-font-size + 8;
+        font-size: 14px;
+
+        @media screen and (min-width: $xlarge-desktop) {
+            font-size: $body-font-size;
+        }
+
+        @media screen and (max-width: $small-desktop) {
+            font-size: $message-font-size;
+        }
+    }
+
+    .stickToTop {
+        width: 55px;
+        height: 55px;
+        background-color: $search-title-color;
+        display: block;
+        position: fixed;
+        right: 13px;
+        bottom: 95px;
+        @include margin(0 5px 0 0);
+        @include padding(17px 21px);
+        box-sizing: border-box;
+        background-origin: content-box;
+        @include border-radius(50%);
+        @include box-shadow(0 -1px 11px #424242);
+        z-index: 999;
+        @include transform(rotate(180deg));
+
+        &:after {
+            width: 25px;
+            height: 25px;
+            right: 16px;
+            bottom: 14px;
+            position: absolute;
+            @extend %sprite;
+            background-position: -226px -164px;
+            content: '';
+        }
+
+
+        @media screen and (max-width: $small-desktop) {
+            @include margin(0 5px 0 0);
+        }
+
+        @media screen and (max-width: $large-tablet) { 
+            @include margin(0 5px 0 0);
+        }
+        
+        @media screen and (max-width: $large-mobile) { 
+            @include margin(0 5px 0 0);
+            // bottom: 5px;
+        }
+        
+
+        &:hover {
+            background-color: lighten($theme-dark-color , 20%); 
+        }
+    }
+
+    a {
+        color: $footer-text-color;
+        position: relative;
+
+        &:hover {            
+            @include text-decoration(none);
+            color: $footer-title-color;
+            @include text-decoration (underline);
+        }
+        
+    }
+
+    .basis30 {
+        flex-basis: 30%;
+        @include margin(0 30px 0 0);
+
+        @media screen and (max-width: $tablet) {
+            @include margin(0);
+        }
+    }
+
+    .basis60 {
+        flex-basis: 60%;
+    }
+
+    .footerLinkssection {
+        @include flex;
+        justify-content: space-between;
+        @include margin(0 0 10px);
+
+        @media screen and (max-width: $tablet) {
+            @include flex-direction(column);
+        }
+
+        @media screen and (max-width: $mobile) {
+            @include margin(0);
+        }
+
+        @media screen and (max-width: $mobile) {
+
+        }
+
+        .footerAbout {
+            flex-basis: 25%;
+            @include margin(0 2.5rem 0 0);
+            
+            @media screen and (max-width: $large-mobile) {
+                @include margin(0 0rem 20px 0);
+            }
+        }
+
+        .footerLinks {
+            flex-basis: 67%;
+
+            @media screen and (max-width: $desktop) {
+                flex-basis: 70%;
+            }
+
+            .footerLinkSection {
+                @include flex;
+                justify-content: space-between;
+
+                @media screen and (max-width: $desktop) {
+                    padding-right: 1rem;
+                }
+
+                @media screen and (max-width: $large-tablet) {
+                    @include flex-wrap;
+                    padding-right: 0;
+                    .services, .quicklinks, .otherLinks, .headQuerter {
+                        max-width: 50%;
+                        flex-basis: 50%;
+                        @include margin(0 0 1rem 0);
+                        @include justify-content (space-between)
+                    }
+                }
+
+                @media screen and (max-width: $xlarge-mobile) {
+                    @include flex-direction(column);
+
+                    .services, .quicklinks, .otherLinks, .headQuerter {
+                        max-width: 100%;
+                        flex-basis: 100%;
+                        @include margin(0 0 1rem 0);
+                    }
+                }    
+            }
+
+            ul {
+
+                li {
+                    @include padding(0 0 0 25px);
+                    @include margin(0 0 6px);
+                    position: relative;
+                    font-size: 14px;
+
+                    @media screen and (min-width: $xlarge-desktop) {
+                        font-size: $body-font-size;
+                    }
+
+                    @media screen and (max-width: $small-desktop) {
+                        font-size: $message-font-size;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        @extend %sprite;
+                        background-position: -133px -3px;
+                        width: 5px;
+                        height: 11px;
+                        left: 0px;
+                        top: 50%;
+                        margin-top: -5px; 
+                        cursor: pointer;
+                    }
+
+                    &.current-menu-item {
+                        a {
+                            color: $text-white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footerDetailsection {
+        @include flex;
+        justify-content: space-between;
+        @include margin(0 0 20px);
+
+        @media screen and (max-width: $tablet) {
+            @include flex-direction(column);
+            @include margin(0);
+        }
+
+        .headQuerter {
+            @extend .basis30;
+
+            .widget_nav_menu {
+                @include margin(0 0 20px);
+            }
+
+            ul {
+
+                li {
+                    @include padding(0 0 0 25px);
+                    @include margin(0 0 10px);
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        @extend %sprite;
+                        background-position: -133px -3px;
+                        width: 5px;
+                        height: 11px;
+                        left: 0px;
+                        top: 5px;
+                        cursor: pointer;
+                    }
+
+                    &.current-menu-item {
+                        a {
+                            color: $text-white;
+                        }
+                    }
+                }
+            }
+
+            .contactNumber {
+                @include padding(0 0 0 35px);
+                color: $footer-text-color;
+
+                .phoneIcon {
+                    content: "";
+                    position: absolute;
+                    @extend %sprite;
+                    @include transition(300ms ease);  
+                    top: 0;
+                    left: 0;
+                    background-position: -149px -165px;
+                    width: 21px;
+                    height: 21px;
+                }
+
+                &:hover {
+                    color: $footer-title-color;
+                    .phoneIcon {
+                        background-position: -179px -165px;
+                    }
+                }
+            }
+        }
+
+        .certificateSection {
+            @extend .basis60;
+
+            .certification-slider {
+                @include flex;
+                justify-content: space-between;
+
+                .certification {
+                    @media screen and (max-width: $desktop) {
+                        max-width: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerCopyrightsection{
+        @include flex;
+        @include align-center;
+        justify-content: space-between;
+        border-top: 1px solid rgb(75, 75, 75);
+        @include margin(0px 0 0 0px);
+        @include padding(25px 0 0 0px);
+
+        @media screen and (max-width: $tablet) {
+            @include flex-direction(column);
+            text-align: center;
+        }
+
+        .footer-socialmedia {
+            order: 2;
+
+            .widget_media_image {
+                display: inline-block;
+            }
+            .widget_text {
+                display: inline-block;
+                vertical-align: top;
+                @include margin(0 0 0 1.5rem);
+            }
+        }
+
+        .copyright {
+            @extend .basis30;
+            @include margin(-15px 0 0);
+            order: 1;
+            text-align: left;
+
+            @media screen and (max-width: $desktop) {
+                flex-basis: 100%;
+            }
+
+            @media screen and (max-width: $tablet) {
+                order: 2;
+                @include margin(15px 0 0);
+            }
+
+            p {
+                @include margin(25px 0 0);
+
+                @media screen and (max-width: $large-tablet-max) {
+                    text-align: center;
+                }
+
+                @media screen and (max-width: $small-mobile) {
+                    font-size: 13px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }           
+        }
+
+        .memberSection {
+            @extend .basis60;
+
+            .memberItems {
+                @include flex;
+                justify-content: flex-end;
+
+                .thumbnail {                    
+                    @include margin(0 10px 0);
+
+                    &:last-child {
+                        @include margin(0);
+                    }
+                }
+            }
+        }
+    }
+
+    .readMore {
+        color: $footer-text-color;
+        font-weight: 500;
+        font-family: $title-font-family;
+
+        &:before {
+            background-position: -51px -3px;
+        }
+
+        &:hover {
+            color: $footer-title-color;
+        }
+    }
+
+    .footer-address {
+
+        ul {
+            @include flex;
+            @include align-center;
+            @include justify-content(center);
+
+            @media screen and (max-width: $mobile) {
+                flex-wrap: wrap;
+            }
+
+            li {
+                @include padding(0 15px);
+                position: relative;
+                font-size: $body-font-size;
+                font-family: $title-font-family;
+                font-weight: 500;
+
+                @media screen and (max-width: $large-mobile) {
+                    @include padding(0 9px);
+                }
+
+                &:first-child {
+                    @include padding(0 20px 0 0px);
+                }
+
+                &:before { 
+                    background-image: none;
+                }
+
+                &:after {
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    left: -2.5px;
+                    top: 50%;
+                    @include margin(-2.5px 0 0px);
+                    content: '';
+                    background-color: rgb(75, 75, 75);
+                    
+                }
+
+               &:first-child {
+                    &:after {
+                        display: none;
+                    }
+               } 
+            }
+        }
+    }
+}
+
+.secialMedia {
+    @include margin(15px 0 0);
+
+    @media screen and (max-width: $tablet) {                    
+        @include margin(15px 0 15px);
+        text-align: center;
+    }
+
+    .socialIcon {
+        position: relative;
+        width: 39px;
+        height: 39px;
+        display: inline-block;
+        background-color: #404040;
+        border: 1px solid #919191;
+        @include border-radius(50%);
+        @include margin(0 6px 0 0);
+
+        &:before {
+            content: "";
+            position: absolute;
+            @extend %sprite;
+            @include transition(300ms ease);
+
+        }
+
+        &.facebook{
+            &:before {
+                background-position: -229px -5px;
+                width: 8px;
+                height: 17px;
+                top: 9px;
+                left: 50%;
+                transform: translateX(-50%);
+            }                            
+
+            &:hover {
+                background-color: #004eb0;
+                border: 1px solid #004eb0;
+            }
+        }
+
+        &.linkedIn {
+
+            &:before {
+                background-position: -145px 0;
+                width: 17px;
+                height: 17px;
+                top: 9px;
+                left: 11px;
+            }
+            
+            &:hover {
+                background-color: #016096;
+                border: 1px solid #016096;
+            }
+        }
+
+        &.youTube {  
+
+            &:before {
+                background-position: -169px 0;
+                width: 17px;
+                height: 21px;
+                top: 8px;
+                left: 10px;
+            }  
+            
+            &:hover {
+                background-color: #e22c22;
+                border: 1px solid #e22c22;
+            }
+        }
+    }
+}
+
+.chatWithUS {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    width: 55px;
+    height: 55px;
+    background-color: #d91919;
+    @include border-radius(50%);
+    @include box-shadow(0 0px 15px #403f3f);
+    z-index: 1;
+    display: none;
+
+    .chatIcon {
+        display: block;
+        @extend %sprite;
+        @include transition(300ms ease);  
+        top: 50%;
+        left: 50%;
+        background-position:  0 -685px;
+        width: 27px;
+        height: 21px;
+        @include margin(17px 14px);
+    }
+
+    &:hover {
+        background-color: $primary-theme-color;
+    }
+}
+.clickContact {
+    position: fixed;
+    right: 0px;
+    top: 140px;
+    width: 54px;
+    height: 54px;
+    margin-top: 0;
+   
+    .contactIcon {
+        display: block;
+        @extend %sprite;
+        @include transition(300ms ease);  
+        top: 50%;
+        left: 50%;
+        background-position: -358px -683px;
+        width: 26px;
+        height: 26px;
+        @include margin(0px 0 0 14px);
+
+        @media screen and (max-width: $mobile) {
+            @include margin(7px 0 8px 8px);
+        }
+    }
+
+    &:hover, &.open-popup {
+        background-color: $h3-color;
+
+        .contactIcon {
+            background-position: -391px -683px;
+        }
+    }
+}
+
+.clickGetaquote {
+    position: fixed;
+    top: 174px;
+    right: 0px;
+    height: 54px;
+    width: 54px;
+    z-index: 1;
+
+   .quoteIcon {
+        display: inline-block;
+        @extend %sprite;
+        @include transition(300ms ease); 
+        background-position: -287px -683px;
+        width: 26px;
+        height: 32px;
+        @include margin(6px 0px 0px 15px);
+    }
+
+    a {
+        &:hover, &.open-popup {
+            background-color: $h3-color;
+
+            .quoteIcon {
+                background-position: -322px -683px;  
+            }
+        }
+    }
+
+    &:hover {
+        a { 
+            background-color: $h3-color;
+
+            .quoteIcon {
+                background-position: -322px -683px;  
+            }
+        }  
+    }
+}
+
+.hireAgileTeam {
+    position: fixed;
+    top: 228px;
+    right: 0px;
+    z-index: 1;
+ 
+    a {
+        .teamIcon {
+            display: inline-block;
+            @extend %sprite;
+            @include transition(300ms ease); 
+            background-position: -209px -683px;
+            width: 30px;
+            height: 25px;
+            @include margin(-1px 0px 0px 13px);
+                      
+        }   
+
+        &:hover {
+            
+            .teamIcon {
+                 background-position: -249px -683px; 
+            }
+        }
+    }
+
+    &:hover {
+
+        a {
+            background-color: $h3-color;  
+            
+            .teamIcon {
+                background-position: -249px -683px; 
+           }
+        }        
+    }
+}
+
+.callForInquiry {
+    @include flex;
+    @include flex-direction(column);
+    background-color: $body-bg-color;
+    @include padding(20px 30px);
+    right: -290px;
+    position: fixed;
+    top: 120px;
+    z-index: 1;
+    margin-top: 0;
+    max-width: 300px;
+    @include transition(300ms ease); 
+
+    &.open-popup {
+        right: 54px; 
+
+        .clickContact  {
+            right: 0 !important;
+        }
+    }
+
+    @media screen and (max-width:  $tablet) {
+      display: none;
+    }
+   
+    &.open-popup {
+        @include box-shadow(-7px 0px 10px 0px #a8a8a8);
+    }
+
+    .inquiryTitle {
+        color: $nav-link-color;
+        font-weight: 600;
+        font-size: 19px;
+        border-bottom: $border;
+        @include margin(0 0 12px);
+        @include padding(0 0 10px);
+    }
+
+    .phoneNumbers {
+
+        li {
+            @include margin(0 0 12px);
+            padding: 0;
+            display: flex;
+
+            a {
+                color: $body-color;
+                background: transparent;
+                transform: rotate(0deg);
+                display: revert;
+                width: 100%;
+                height: auto;
+
+            }
+
+            &::before {
+                display: none;
+            }
+
+            &:last-child {                    
+                @include margin(0);
+            }
+
+            span {
+                color: $primary-theme-color;
+                font-weight: 500;
+                @include margin(0 10px 0 0);
+                width: 72px;
+                display: inline-block;
+                text-align: right;
+            }
+        }
+    }
+}
+
+
+.callForInquiryTool {
+    position: fixed;
+    top: 120px;
+    right: 0px;
+    height: 54px;
+    width: 54px;
+    z-index: 1;
+
+    &:hover {
+        a {
+            background-color: $h3-color;
+
+            .contactIcon {
+                background-position: -391px -683px;
+            }
+        }        
+    }
+}
+
+.hireAgileTeam, .clickGetaquote, .callForInquiryTool {
+
+    a {
+        @include flex;
+        @include align-center;
+        @include transform(rotate(0deg));
+        background-color: $sidebar-active-color;
+        @include padding(0px);
+        height: 54px;
+        width: 54px;
+        color: $text-white;
+        z-index: 99;
+        position: relative;
+        top: 0;
+
+    }
+}
+
+.callaction {
+   
+    .tooltipbox {
+        display: inline-block;
+        color: #fff;
+        @include transform(rotate(0deg));
+        margin: 0;
+        position: absolute;
+        top: 12px;
+        background-color: $h3-color;
+        padding: 0 18px;
+        @include box-shadow(0 0px 15px #403f3f);
+        line-height: 35px;
+        z-index: 0 !important;
+        @include transition(300ms ease);
+        font-size: $message-font-size;
+
+        &:after {
+            @extend %sprite;
+            @include transition(300ms ease); 
+            background-position: -275px 0px;
+            width: 20px;
+            height: 20px;
+            content: '';
+            position: absolute;
+            right: -12px;
+            top: 6px;
+        }
+
+    }
+
+    .callForInquiryTool {
+        .tooltipbox {
+            width: 80px;
+            right: -175px;
+            z-index: 0 !important;
+        }  
+
+        &:hover {
+            .tooltipbox { 
+                right: 70px;
+            }  
+        }  
+    }
+
+    .clickGetaquote {
+
+        .tooltipbox {
+            width: 112px;
+            right: -135px;
+            z-index: 0 !important;
+        }  
+
+        &:hover {
+            .tooltipbox { 
+                right: 70px;
+                
+            }  
+        }  
+    }
+
+    .hireAgileTeam {
+
+        .tooltipbox {
+            width: 155px;
+            right: -185px;
+            z-index: 0 !important;
+        }  
+
+        &:hover {
+            .tooltipbox { 
+                right: 70px;
+            }  
+        }  
+    }
+
+    @media screen and (max-width: $large-mobile) {
+        .callForInquiryTool, .hireAgileTeam  {
+            display: none;
+        }
+
+        .clickGetaquote {
+            top: 140px;
+        }
+    }
+}
+
+
+.overlay {
+    @include overlay;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.fxo-widget-iframe {
+    bottom: 10px !important;
+    right: 0px !important;
+}
+
+#menu-other-divisions {
+    li {
+        a {
+            position: relative;
+
+            &:after {
+                @extend %sprite;
+                @include transition(300ms ease); 
+                background-position: -294px -4px;
+                width: 20px;
+                height: 20px;
+                content: '';
+                position: absolute;
+                right: -30px;
+                top: 2px;
+
+                @media screen and (max-width: $desktop) {
+                    right: -22px;
+                    top: 0px;
+                }
+
+                @media screen and (max-width: $large-tablet-max) {
+                    right: -30px;
+                }
+            }
+        }
+    }
+}
+
+
+#fxo-widget-iframe {
+    display: none;
+}
+
+.cookiePolicy-box {
+    @include justify-content(space-between);
+    @include flex;
+    padding: 15px 0px;
+    justify-items: center;
+    flex: 0 0 1;
+
+    @media screen and (max-width: $large-mobile) {
+        display: block;
+        text-align: center;
+    }
+
+    p {
+        color: $body-color;
+        font-size: $message-font-size;
+        margin: 0;
+        text-align: left;
+        padding-right:25px;
+        
+        @media screen and (min-width: $xlarge-desktop) {
+            font-size: $body-font-size;
+        }
+        
+        @media screen and (max-width: $large-mobile) {
+            text-align: center;
+            padding-right:0px;
+            padding-bottom: 10px;
+            line-height: 20px;
+        }        
+    }
+
+    .acceptCookie {
+        width: 180px;
+        color: $text-white;
+        border: 1px solid $primary-button-bg-color;
+        background-color: $primary-button-bg-color;
+        @include border-radius (2px);
+        text-align: center;
+        padding: 5px;
+        height: 40px;
+        margin: 5px 0 0 0;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: $body-font-size;
+
+        &:hover {
+            color: $text-white;
+            border: 1px solid $h3-color;
+            background-color: $h3-color;
+        }
+
+        @media screen and (max-width: $large-mobile) {
+            display: inline-block;
+            width: 150px;
+        }
+    }
+}
+.cookiealert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 999;
+    opacity: 0;
+    border-radius: 0;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+    color: $body-color;
+    background: $sidebar-active-color;
+}
+
+.cookiealert.show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+}
+
+.cookiealert a {
+    text-decoration: underline
+}
+
+#hubspot-messages-iframe-container.widget-align-right {
+    bottom: 0 !important;
+    z-index: 1 !important;
+}
+.grecaptcha-badge  {
+    z-index: 9 !important;
+}

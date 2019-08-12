@@ -1,0 +1,268 @@
+%input {
+    width: 100%;
+    @include padding(10px 15px); 
+    @include margin(0 0 15px);      
+    color: $placeholder-color;
+    font-size: 15px;
+    border: $border;
+    outline: none;
+    height: 45px;
+    @include border-radius(0);
+    &:disabled {
+        background-color: rgb(235, 235, 228);
+    }
+}
+
+
+.form-wrap {
+    @include flex;
+    @include flex-wrap;
+    justify-content: space-between;
+
+    .wpcf7-form-control-wrap {
+        //width: 48%;
+        width: 49%;
+
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }
+
+        input[type=text], input[type=tel], input[type=email], select, textarea {
+            @extend %input;
+            width: 100%;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .select2-container {
+            width: 100% !important;
+            @include margin(0 0 15px);
+
+            &.select2-container--default {
+
+                .select2-selection--single {
+                    @extend %input;
+                    @include padding(10px 5px);
+                    @include margin(0);
+
+                    .select2-selection__rendered {
+                        color: $placeholder-color;
+                        padding-left: 13px;
+                    }
+
+                    .select2-selection__placeholder {
+                        color: lighten($placeholder-color, 10%);
+                    }
+
+                    .select2-selection__arrow {
+                        height: 46px;
+                    }
+                }
+            }
+        }
+
+        label {
+            &.error {
+                position: relative;
+                bottom: 12px;
+                padding-left: 2px;
+                font-size: 15px;
+                color: $nav-active-link-color;
+            }
+        }
+    }
+
+
+    &.full-wrap {
+        @include flex-direction(column);
+
+        .wpcf7-form-control-wrap {
+            width: 100%;
+        }
+
+        &.methodSelect {
+            .wpcf7-form-control-wrap {
+                width: 62%;
+
+                @media screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+            #group-288 {
+                width: 38%;
+
+                @media screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+
+                &.wpcf7cf-hidden {
+                    display: none !important;
+                }
+
+                display: inline-block !important;
+
+                input[type=text] {
+                    @include margin(0);
+                }
+            }
+        }
+
+        &.services {
+            //@include margin(0 0 15px);
+        }
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: $nav-submenu-color;
+        @include margin(0 0 20px);
+    }
+}
+
+.button-wrap {
+    @include margin(20px 0 0);
+
+    .wpcf7-form-control {
+
+        &.wpcf7-submit {
+            @extend %button;
+        }
+    }
+}
+
+.select2-container {
+    ul {
+        li {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.wpcf7-checkbox {
+    @include margin(10px 0);
+
+    .wpcf7-list-item {
+        @include margin(0 0 10px);
+
+        label {
+            position: relative;
+            color: $label-color;
+            font-size: $search-font-size;
+            cursor: pointer;
+
+            input {
+                width: 0;
+                height: 0;
+                @include display(block);
+                position: absolute;
+                @include opacity(0);
+
+                &:checked ~ .wpcf7-list-item-label:before {
+                    @include display(block);
+                    background-position: -36px -770px;
+                }        
+            }
+
+            .wpcf7-list-item-label {
+
+                @include padding(1px 0 0 40px);
+                margin-right: 24px;
+
+                &:before {
+                    width: 26px;
+                    height: 23px;
+                    @include pseudo;
+                    @extend %sprite;
+                    background-position: 0 -770px;
+                    left: 0;
+                }        
+            }    
+        }
+    }
+}
+
+.wpcf7-form {
+    label {
+        &.error {
+            position: relative;
+            bottom: 12px;
+            padding-left: 2px;
+            font-size: 15px;
+            color: $nav-active-link-color;
+        }
+    }
+
+    .ajax-loader {
+        background-image: url(img/ajax-loader.gif) !important;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 43px !important;
+        height: 50px !important;
+    }
+}
+
+
+.admin-bar {
+    .select2-container--open {
+        .select2-dropdown {
+            top: 32px;
+        }
+    }
+}
+
+label.checkbox {
+    position: relative;
+    color: $label-color;
+    font-size: $search-font-size;
+    cursor: pointer;
+
+    input {
+        width: 0;
+        height: 0;
+        @include display(block);
+        position: absolute;
+        @include opacity(0);
+
+        &:checked ~ span.checked:before {
+            @include display(block);
+            background-position: -36px -770px;
+        }        
+    }
+
+    span.checked {
+
+        @include padding(1px 0 0 40px);
+        margin-right: 24px;
+
+        &:before {
+            width: 26px;
+            height: 23px;
+            @include pseudo;
+            @extend %sprite;
+            background-position: 0 -770px;
+            left: 0;
+        }        
+    }    
+}
+
+form {
+    &.sent {
+        margin: 10px 0;
+    }
+
+}
+
+.resume, #fileuploadfield {
+    display:none;
+}
+
+#uploadtextfield {
+    background-image: url(img/browse.png);
+    background-position: 96%;
+    background-repeat: no-repeat;
+    padding-right: 45px;
+}

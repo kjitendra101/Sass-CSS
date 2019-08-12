@@ -1,0 +1,249 @@
+.getQuotePopup {
+    display: none;
+
+    &.open-popup {
+        @extend %open-popup;
+
+        .getQuoteSection {
+            @extend %popup-container;
+
+            @media screen and (max-width: $desktop) {
+                top: 35px;
+            }
+
+            @media screen and (max-width: $large-tablet-max) {
+                top: 108px;
+            }
+
+            @media screen and (max-width: $tablet) {
+                @include padding(40px 20px);
+            }
+
+            h3 {
+                font-size: 30px;
+                font-weight: 800;
+            }
+
+        }
+    }
+
+    .closePopup {
+        @extend %closePopup;
+    }
+}
+
+.caseStudyPopup {
+    display: none;
+
+    &.open-popup {
+        @extend %open-popup;
+
+        .caseStudySection {
+            @extend %popup-container;
+            max-width: 450px;
+
+            @media screen and (max-width: $desktop) {
+                top: 35px;
+            }
+
+            @media screen and (max-width: $large-tablet-max) {
+                top: 108px;
+            }
+            @media screen and (max-width: $tablet) {
+                @include padding(40px 20px);
+            }
+
+            @media screen and (max-width: $large-mobile) {
+                max-width: 95%;
+            }
+
+            h3 {
+                font-size: 30px;
+                font-weight: 800;
+            }
+
+        }
+    }
+
+    .closePopup {
+        @extend %closePopup;
+    }
+}
+
+.newsletterPopup {
+    display: none;
+
+    &.open-popup {
+        @extend %open-popup;
+
+        // @media screen and (max-width: $tablet) {
+        //     display: none;
+        // }
+
+        .newsletterSection {
+            @extend %popup-container;
+
+            @media screen and (max-width: $tablet) {
+                @include padding(40px 20px);
+            }
+
+            .formSection {
+                @include flex;
+
+                @media screen and (max-width: $large-mobile) {
+                    @include flex-direction(column);
+                }
+
+                .leftContentSection {
+                    padding-top: 70px;
+                    position: relative;
+                    flex-basis: 60%;
+
+                    @media screen and (max-width: $tablet) {
+                        @include margin(0 0 20px);
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        @extend %sprite;
+                        background-position: -104px -600px;
+                        width: 49px;
+                        height: 49px;
+                        left: 0;
+                        top: 0;
+                        @include transition(300ms ease);
+                    }
+
+                    h3 {
+                        @include margin(0 0 15px);
+                        font-size: $h3-font-size;
+                    }
+                }
+
+                .rightFormSection {
+                    flex-basis: 60%;
+                }
+            }
+        }
+    }
+
+    .closePopup {
+        @extend %closePopup;
+    }
+}
+
+.applyNowPopup  {
+    display: none;
+
+    &.open-popup {
+        @extend %open-popup;
+
+        .applyNowSection {
+            @extend %popup-container;
+
+            @media screen and (max-width: $tablet) {
+                @include padding(40px 20px);
+            }
+
+            .jobDetailSection {
+                @include flex;
+                @include flex-wrap;
+                @include justify-content(space-between);
+
+                &.deactive {
+                    display: none;
+                }
+
+                h3 {
+                    font-size: 23px;
+                    flex-basis: 50%;
+                    @include margin(0 0 10px);
+
+                    &.exper {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .formSection {
+                @include flex;
+                @media screen and (max-width: $small-desktop) {
+                    max-height: 50vh;
+                    overflow-y: auto;
+                }
+
+                &.deactive {
+                    display: none;
+                }
+
+                .leftContentSection {
+                    padding-top: 70px;
+                    position: relative;
+                    flex-basis: 60%;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        @extend %sprite;
+                        background-position: -104px -600px;
+                        width: 49px;
+                        height: 49px;
+                        left: 0;
+                        top: 0;
+                        @include transition(300ms ease);
+                    }
+
+                    h3 {
+                        @include margin(0 0 15px);
+                    }
+                }
+
+                .rightFormSection {
+                    flex-basis: 60%;
+                }
+
+                .wpcf7-response-output {
+                    display: none !important;
+                }
+            }
+
+            .responseSection {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .closePopup {
+        @extend %closePopup;
+    }
+}
+.closePopup{
+    &.mobileMenu {
+        @extend %closePopup;
+        right: 5px;
+        top: 15px;
+
+        &:before {
+            background-position: -164px -682px;
+            width: 29px;
+            height: 29px;
+
+            @media screen and (max-width: $mobile) {
+                background-position: -339px -103px;
+                width: 23px;
+                height: 22px;
+            }
+        }
+
+        &:hover {
+            &:before {
+                background-position: -164px -682px;
+            }
+        }
+    }
+}

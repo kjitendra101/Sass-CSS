@@ -1,0 +1,204 @@
+// Font Family
+
+//@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900');
+
+$font-family: 'Ubuntu';
+$title-font-family: 'Ubuntu';
+
+// Theme colors
+//$primary-theme-color: #c43235;
+// $primary-theme-color: #b2161a;
+$primary-theme-color: #b90000;
+$theme-dark-color: #363636;
+$text-white: #fff;
+
+// Body
+$body-font-family: $font-family;
+$body-font-size: 15px;
+$body-xlarge-font-size: 16px;
+$body-small-font-size: 14px;
+$body-color: #181818;
+$body-line-height: 25px;
+$body-font-weight: 400;
+$body-bg-color: #fff;
+// body small desktop
+$body-font-size-small: 15px;
+$paragraph-font-color: #363636;
+// Wrapper
+$wrapper-bg-color: #fff;
+//$read-more-color: #c43235;
+$read-more-color: #b90000;
+
+// Navigation
+$nav-link-color: #333333;
+//$nav-active-link-color: #c43235;
+$nav-active-link-color: #b90000;
+$nav-head-font-size: 20px;
+$nav-font-size: 15px;
+$nav-title-color: #2a2a2a;
+$nav-submenu-color: #595959;
+$mega-menu-active: #a93235;
+
+// Banner 
+$banner-title-size: 50px;
+$banner-text-size: 18px;
+$banner-dark-theme-color: #595959;
+$banner-light-theme-color: #fff;
+
+//// Banner bg color 
+$banner-bg: #494949;
+
+// H1
+$h1-font-weight: 700;
+$h1-font-size: 46px;
+$h1-line-height: 58px;
+$h1-color: #2c3139;
+$h1-margin-bottom: 40px; 
+$h-font: $title-font-family;
+
+// H2
+$h2-font-weight: 700;
+$h2-font-size: 30px;
+$h2-line-height: 50px;
+$h2-color: #2a2a2a;
+$h2-margin-bottom: 30px;
+
+// H2 Lerge font
+$h2-font-size-: 45px;
+$h2-font-size-sm: 40px; 
+// H2 small font
+$h2-font-size-small: 36px; 
+
+// H3
+$h3-font-weight: 700;
+$h3-font-size: 24px;
+$h3-color: #545454;
+$h3-margin-bottom: 18px;
+// H3 small font
+$h3-font-size-small: 23px;
+
+
+// H4
+$h4-font-weight: 500;
+$h4-font-size: 20px;
+$h4-color: #535353;
+$h4-margin-bottom: 15px;
+
+// Label
+$label-color: #666;
+$label-size: 14px;
+$search-title-color: #444;
+
+$placeholder-color: #555;
+$placeholder-font-size: 16px;
+
+$label-highlight-color: #ff3131;
+//$placeholder-highlight-color: #c43235;
+$placeholder-highlight-color: #b90000;
+
+
+// Search
+$search-font-size: 15px;
+$search-color: #8c8c8c;
+$search-button-bg-color: #787878;
+
+// Table
+$table-font-size: 15px;
+
+// Tab
+$tab-bg-color: #666666;
+
+// Popup
+$popup-text-color: #484747;
+$popup-border-color: #6f7277;
+$popup-shadow: #de908a;
+
+// Sidebar Menu
+$sidebar-active-color: #d8d8d8;
+$sidebar-active-font-color: #1f1f1f;
+$sidebar-color: #555;
+$sidebar-border-color: #6e6e6e;
+
+$sidebar-bglight-color: #454545;
+
+// Border
+$border-color: #cdcdcd;
+$border: 1px solid $border-color;
+
+$border-left-color: #f0f0f0;
+
+// Button
+$button-font-size: 18px;
+
+$primary-button-color: #fff;
+$primary-button-hover-color: #fff;
+//$primary-button-bg-color: #c43235;
+$primary-button-bg-color: #b90000;
+$primary-button-hover-bg-color: #BF372E;
+
+$secondary-button-color: #fff;
+$secondary-button-hover-color: #fff;
+$secondary-button-bg-color: #585f6b;
+$secondary-button-hover-bg-color: #a7a7a7;
+
+// Pagination
+$page-button-bg-color: #BF372E;
+$page-button-hover-bg-color: #ef5b50;
+
+// Masonary 
+$title-font-size: 20px;
+$title-color: #222222;
+$category-color: #767676;
+
+
+// Media Query
+$xlarge-desktop: 1600px;
+$large-desktop: 1366px;
+$small-desktop: 1280px;
+$m-small-desktop: 1170px;
+$desktop: 1024px;
+$large-tablet: 992px;
+$large-tablet-max: 991px;
+$tablet: 768px;
+$large-mobile: 767px;
+$mobile: 576px;
+$xlarge-mobile: 400px;
+$small-mobile: 360px;
+
+// Messages
+$message-font-size: 13px;
+$message-line-height: 15px;
+$error-color: #ff0000;
+$success-color: #0fa93e;
+
+// Sections
+$section-identifier-bg-color: #e3e3e3;
+$seperator-color: #9b9b9b;
+
+//paralax
+$parallax-border-color: #8b8a8a;
+$parallax-round-bg-color: #4e4e4e;
+$parallax-rount-count-color: #fff;
+$parallax-rount-text-color: #b7b7b7;
+
+//Table
+$table-border-color: #c6c6c6;
+
+// Swiper prev-next color
+
+$swiper-bg-color: #333333;
+$swiper-hover-bg-color: #fff;
+
+// Footer
+$footer-bg-color: #353535;
+$footer-title-color: #fff;
+$footer-text-color: #dcdcdc;
+$footer-h4-font-size: 24px;
+
+// $bg-overlay: #e1e1e1;
+$Services-box-border-color: #ccc;
+$h2-mobile: 26px;
+$h3-small-font-size: 22px;
+$font-small-18px: 18px;
+$font-small-agile: 17px;
+$paragraph-margin-bottom: 14px;

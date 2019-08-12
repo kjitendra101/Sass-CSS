@@ -1,0 +1,39 @@
+@font-face {
+    font-family: $font-family-regular;
+    src: url('../css/fonts/firasans-regular-webfont.woff2') format('woff2'),
+         url('../css/fonts/firasans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $font-family-medium;
+    src: url('../css/fonts/firasans-medium-webfont.woff2') format('woff2'),
+         url('../css/fonts/firasans-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $font-family-semibold;
+    src: url('../css/fonts/firasans-semibold-webfont.woff2') format('woff2'),
+         url('../css/fonts/firasans-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $font-family-bold;
+    src: url('../css/fonts/firasans-bold-webfont.woff2') format('woff2'),
+         url('../css/fonts/firasans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: $font-family-extrabold;
+    src: url('../css/fonts/firasans-extrabold-webfont.woff2') format('woff2'),
+         url('../css/fonts/firasans-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
